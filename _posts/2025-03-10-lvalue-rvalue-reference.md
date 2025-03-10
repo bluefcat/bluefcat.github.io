@@ -15,7 +15,7 @@ tags: Cpp Modern_Cpp
 ```cpp
 
 int x = 27; //x is l-value, 27 is r-value
-int y = 42; //y is r-value, 42 is r-value
+int y = 42; //y is l-value, 42 is r-value
 
 x = y; // OK
 y = x; // OK
