@@ -2,7 +2,7 @@
 ---
 layout: post
 title:  "lvalue, rvalue and reference"
-tags: C++ Modern_C++
+tags: C++
 ---
 
 ## l-value and r-value
@@ -13,7 +13,8 @@ tags: C++ Modern_C++
     - It is a value that is not an l-value.  
 
 ### Examples
-```cpp   
+```cpp
+
 int x = 27; //x is l-value, 27 is r-value
 int y = 42; //y is r-value, 42 is r-value
 
@@ -39,13 +40,15 @@ int* p3 = bar(); //Error! bar() is r-value
 reference is an alias for an object
 
 ### l-value reference
-```cpp  
+```cpp
+
 (type name)& (identifier) = (l-value expression);
 ```
 Exceptionally, an l-value reference with the **const** keyword can refer to an r-value
 
 ### l-value reference examples
-```cpp  
+```cpp
+
 int a = 3;
 int& b = a;
 
@@ -55,12 +58,14 @@ const int& d = 3;
 
 ### r-value reference examples
 Added since C++11
-```cpp  
+```cpp
+
 (type name)&& (identifier) = (r-value expression);
 ```
 
 ### r-value reference examples
-```cpp  
+```cpp
+
 int sum(int a, int b){
     return a + b;
 }
@@ -70,7 +75,8 @@ int&& val = sum(5, 4); //val is x-value (eXpiring value)
 ```
 
 ### move semantics
-```cpp  
+```cpp
+
 class X{
     X();
     X(const X&);
