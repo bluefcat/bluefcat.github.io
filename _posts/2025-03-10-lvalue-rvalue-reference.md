@@ -1,8 +1,7 @@
-
 ---
 layout: post
 title:  "lvalue, rvalue and reference"
-tags: C++
+tags: Cpp Modern_Cpp
 ---
 
 ## l-value and r-value
