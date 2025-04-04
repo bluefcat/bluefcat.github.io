@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "fast fourier transform algorithm"
-tags: Cpp Algorithm Template
+tags: Template Cpp Algorithm
 ---
 
 ## Implementation

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "pollard's rho algorithm"
-tags: Cpp Algorithm Template
+tags: Template Cpp Algorithm
 ---
 
 ## Implementation
