@@ -11,6 +11,14 @@ constexpr int N = 50001;
 constexpr int LN = 19;
 
 //T is unordered_map<int, vector<int>>
+/*
+    for(int i = 1; i < LN; i ++){
+		for(int x = 1; x <= n; x ++){
+			if(table[i-1][x] != 0)
+				table[i][x] = table[i-1][table[i-1][x]];
+		}
+	} 
+*/
 template<typename T>
 void build_depth(
 	T& graph, int* depth, int table[][N], int root, int idx	
