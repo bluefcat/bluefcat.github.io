@@ -9,9 +9,9 @@ permalink: /tags/
 {% for tag in site.tags %}
 <details>
 <summary>{{ tag[0] }}</summary>
-{{ tag[1] | size }} posts
+<p>{{ tag[1] | size }} posts</p>
   {% for post in tag[1] %}
- - [{{ post.title }}]({% include relative %}{{ post.url }})
+    <a href={% include relative %}{{ post.url }}>{{ post.title }}</a>
   {% endfor %}
 </details>
 {% endfor %}
