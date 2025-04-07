@@ -11,7 +11,7 @@ permalink: /tags/
 <summary>{{ tag[0] }}</summary>
 <p>{{ tag[1] | size }} posts</p>
   {% for post in tag[1] %}
-    <a href={% include relative %}{{ post.url }}>{{ post.title }}</a>
+    <a href="{% include relative %}{{ post.url }}">{{ post.title }}</a><br>
   {% endfor %}
 </details>
 {% endfor %}
