@@ -34,7 +34,7 @@ void build_sieve(){
 3. When sieving with p, start eliminating from p^2.
 4. To sieve numbers up to m, it suffices to eliminate using primes p such that p^2 <= m
 
-- value(i) = 2*i + 3
+- value(i) = 2\*i + 3
 - index(v) = (v - 3)/2
-- step(i) = index((k + 2)*(2*i + 3)) - index(k*(2*i + 3)) = 2*i + 3
-- index(value(i)^2) = 2*i^2 + 6*i + 3
+- step(i) = index((k + 2)\*(2\*i + 3)) - index(k\*(2\*i + 3)) = 2\*i + 3
+- index(value(i)^2) = 2\*i^2 + 6\*i + 3
