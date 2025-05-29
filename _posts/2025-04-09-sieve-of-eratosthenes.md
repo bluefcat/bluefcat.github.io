@@ -18,7 +18,7 @@ void build_sieve(){
 		if(prime[i]){ //2*i+3
 			prime[idx] = false;
 			for(int j = idx; N - j > k; j += k){
-				prime[j] = false;
+				prime[j+k] = false;
 			}
 		}
 		idx += k;
