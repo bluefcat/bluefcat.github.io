@@ -4,17 +4,41 @@ title: "sieve of eratosthenes algorithm"
 tags: Template Cpp Prime Math Algorithm
 ---
 
+## Implementation (linear sieve)
+```cpp
+#include <vector>
+
+using lint = long long;
+constexpr int P = 10001;
+bool is_prime[P] = { false, };
+std::vector<lint> prime;
+
+void build_sieve(){
+	for(int i = 2; i < P; i ++) is_prime[i] = true;	
+	for(int p = 2; p < P; p ++){
+		if(is_prime[p])
+			prime.emplace_back(p);
+		
+		for(auto& q: prime){
+			if(p*q >= P) break;
+			is_prime[p*q] = false;
+			if(p%q == 0) break;
+		}
+	}
+}
+```
+
 ## Implementation
 ```cpp
 
-constexpr int N = 10001;
-bool prime[N];
+constexpr int P = 10001;
+bool prime[P];
 
 void build_sieve(){
-	for(int i = 0; i < N; i ++) prime[i] = true;
+	for(int i = 0; i < P; i ++) prime[i] = true;
 	int idx = 3;
 	int k = 3;
-	for(int i = 0; idx < N; i ++){
+	for(int i = 0; idx < P; i ++){
 		if(prime[i]){ //2*i+3
 			prime[idx] = false;
 			for(int j = idx; N - j > k; j += k){
